@@ -6,7 +6,8 @@ use std::mem;
 fn main() {
 	//vec_parts();
 	vec_retain();
-	vec_leak ()
+	vec_leak ();
+	vec_split_off ();
 }
 
 fn vec_parts () {
@@ -41,8 +42,9 @@ fn vec_parts () {
 fn vec_retain () {
 	let mut vec = vec![1, 2, 3, 4, 5, 6, 7];
 	vec.retain(|&x| x % 2 == 0);
-	println!("Vetor resultante: {:?}", vec);
+	println!("\nVetor orgininal: [1, 2, 3, 4, 5, 6, 7]\nResultado do método vec.retain(): {:?}", vec);
 }
+
 
 fn vec_leak () {
 	let x = vec![1, 2, 3];
@@ -50,5 +52,12 @@ fn vec_leak () {
 	
 	static_ref[0] += 1;
 	
-	println!("Resultado do vec.leak(): {:?}", static_ref);
+	println!("\nResultado do método vec.leak(): {:?}", static_ref);
+}
+
+fn vec_split_off () {
+	let mut vec = vec![1, 2, 3, 4, 5];
+	let vec2 = vec.split_off(2);
+	
+	println!("\nResultado do vec.split_off()\nVetor original: {:?}\nVetor receptor: {:?}", vec, vec2);
 }
