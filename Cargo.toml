@@ -17,4 +17,7 @@ path = "src/btreemap/bin/main.rs"
 name = "hashset"
 path = "src/hashset/bin/main.rs"
 
+[[bin]]
+name = "ascii"
+path = "src/ascii/bin/main.rs"
 [dependencies]

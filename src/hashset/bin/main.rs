@@ -124,3 +124,4 @@ fn test_sort() {
     println!("O slice classificado é: {:?}", v);
     //println!("Transformar o slice em vetor: {:?}", vec);
 }
+
