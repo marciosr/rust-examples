@@ -13,5 +13,8 @@ path = "src/vec/bin/main.rs"
 name = "btreemap"
 path = "src/btreemap/bin/main.rs"
 
+[[bin]]
+name = "hashset"
+path = "src/hashset/bin/main.rs"
 
 [dependencies]
